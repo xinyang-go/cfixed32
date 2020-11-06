@@ -20,7 +20,7 @@
 #define cfixed32_from_floating(f)   ((int32_t)((f)*(1u<<16u)))
 #define cfixed32_from_integral(i)   ((int32_t)((i)<<16u))
 #define cfixed32_to_floating(t, c)  ((t)((c)/(1u<<16u)))
-#define cfixed32_to_integral(t, c)  ((t)((c)<<16u))
+#define cfixed32_to_integral(t, c)  ((t)((c)>>16u))
 #define cfixed32_mul(c1, c2)        ((int32_t)(((int64_t)(c1)*(int64_t)(c2))>>16u))
 #define cfixed32_div(c1, c2)        ((int32_t)(((int64_t)(c1)<<16u)/(int64_t)(c2))
 #define cfixed32_max_val            ((int32_t)0x7fffffff)
